@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Herp a Cherp</title>
+        <link rel="stylesheet" href="rsc/css/bootstrap.min.css">
+        <link rel="stylesheet" href="rsc/css/main.css">
+    </head>
+    <body>
+        <div id="cherp_container">
+            <div id="logo">
+                <img id="cherpy" src="rsc/img/cherpy.png">
+                <div id="wire"></div>
+            </div>
+            <h1>Thanks! <small>your cherp was saved</small></h1>
+            <div>
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="rsc/img/egg.png" alt="An image of an egg with a musical rest overlaid.">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Anonymous Says</h4>
+                        <span id="cherp_echo"></span>
+                        <script>
+                            var rawString = decodeURIComponent(window.location.search.split('=')[1]);
+                            document.getElementById('cherp_echo').textContent = rawString;
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
+    

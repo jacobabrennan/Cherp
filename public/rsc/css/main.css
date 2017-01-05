@@ -1,0 +1,60 @@
+/*==== FONT STUFF ============================================================*/
+@font-face {
+    font-family: 'Blenda Script';
+    src: url('/rsc/fonts/Blenda Script.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+    font-family: "Blenda Script";
+    color: rgb(0,60,102);
+}
+h1 small{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(153,102,133);
+}
+
+/*==== TOP BRANDING ==========================================================*/
+#logo{
+    text-align: right;
+}
+#cherpy{
+    margin-bottom:-1em;
+}
+#wire{
+    margin-top: 0em;
+    border-bottom: 1px solid #aaa;
+}
+
+/*==== CHERP LAYOUT ==========================================================*/
+body{
+    background: rgb(251,230,240);
+    text-align: center;
+}
+#cherp_container{
+    margin-top: 4em;
+    text-align: left;
+    display: inline-block;
+    width: 35em;
+}
+#cherp_container form{
+    text-align: right;
+}
+#cherp_text{
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    border: 1px solid #aaa;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    min-height: 10em;
+}
+.media-body{
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    border: 1px solid #aaa;
+    overflow: auto;
+    min-height: 10em;
+    margin-bottom: 1em;
+    background: rgb(255,248,252);
+}
