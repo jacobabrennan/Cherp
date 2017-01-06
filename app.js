@@ -1,5 +1,6 @@
 // ==== CONFIGURATION ==========================================================
 var port = 8080;
+var password; // TEMPORARY - ONLY FOR TESTING UNTIL HTTPS IS FINISHED
 // ==== DON'T EDIT ANYTHING BELOW THIS LINE ====================================
 
 
@@ -54,6 +55,20 @@ app.use('/cherp', function (request, response, next){
     default:
         response.writeHead(405);
         response.end('Error 405: Method not supported.');
+    }
+});
+// TEMPORARY - ONLY FOR TESTING PURPOSES UNTIL HTTPS SUPPORT IS FINISHED
+app.use('/'+password, function (request, response, next){
+    if(request.method !== 'GET'){
+        response.writeHead(405);
+        response.end('Error 405: Method not supported.');
+    } else{
+        // TODO: Require Authentication
+        response.setHeader('Content-Type', 'application/json');
+        fileSystem.readFile(cherpPath, 'utf8', function (error, data){
+            // TODO: Handle read errors, perhaps with 500 level http code.
+            response.end(data);
+        });
     }
 });
 // =============================================================================
